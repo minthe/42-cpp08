@@ -6,12 +6,14 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:25:53 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/16 17:47:08 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/16 21:15:19 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SPAN_CLASS_HPP
 #define SPAN_CLASS_HPP
+
+#include <exception>
 
 class Span
 {
@@ -20,6 +22,11 @@ class Span
 		Span(const Span& src);
 		Span&	operator=(const Span& rhs);
 		~Span();
+
+		class SpanException : public std::exception {
+			public:
+				virtual const char* what() const throw();
+		};
 
 		void	addNumber(int value);
 		int		shortestSpan() const;
