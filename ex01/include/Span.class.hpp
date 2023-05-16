@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:25:53 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/16 21:15:19 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/16 21:43:26 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define SPAN_CLASS_HPP
 
 #include <exception>
+#include <vector>
 
 class Span
 {
@@ -34,7 +35,8 @@ class Span
 
 	private:
 		Span();
-		const unsigned int	_max_integers;
+		std::vector<int>	_array;
+		unsigned int		_max_integers;
 };
 
 #endif
