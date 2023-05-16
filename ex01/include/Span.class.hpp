@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:25:53 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/16 21:43:26 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/16 23:09:33 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define SPAN_CLASS_HPP
 
 #include <exception>
+#include <iterator>
 #include <vector>
 
 class Span
@@ -30,6 +31,7 @@ class Span
 		};
 
 		void	addNumber(int value);
+		void	fillRandom();
 		int		shortestSpan() const;
 		int		longestSpan() const;
 

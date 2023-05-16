@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:25:54 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/16 21:48:26 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/16 23:09:39 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,20 @@ Span&	Span::operator=(const Span& rhs)
 }
 
 Span::~Span() {}
+
+// FUNCTIONS
+
+void Span::addNumber(int value)
+{
+	if (_array.size() >= _max_integers)
+		throw SpanException();
+	_array.push_back(value);
+}
+
+void Span::fillRandom()
+{
+	// TODO
+}
 
 // EXCEPTIONS
 
