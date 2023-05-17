@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:25:53 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/17 14:42:30 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/17 17:13:45 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,12 @@
 #include <iostream>
 #include <algorithm>
 #include <climits>
+#include <numeric>
 
 class Span
 {
 	public:
+		Span();
 		Span(const unsigned int n);
 		Span(const Span& src);
 		Span&	operator=(const Span& rhs);
@@ -39,10 +41,9 @@ class Span
 		int		getSize() const;
 		void	addNumber(int value);
 		void	fillRandom();
-		void	printArray() const;
+		void	printArray();
 
 	private:
-		Span();
 		std::vector<int>	_array;
 		unsigned int		_max_integers;
 		int					_added;
