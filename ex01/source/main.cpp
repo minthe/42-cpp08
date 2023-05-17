@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:30:42 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/17 13:47:35 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/17 14:50:40 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,17 +34,16 @@ int main()
 		{
 			std::cout << "\x1b[47mTest 2\x1b[0m\n"<< std::endl;
 
-			Span sp = Span(-5);
-			sp.addNumber(-999);
-			sp.addNumber(+6);
+			Span sp = Span(1);
+			// sp.addNumber(4);
+			// sp.addNumber(+6);
 			std::cout << "size: " << sp.getSize() << std::endl;
-			sp.fillRandom();
+			// sp.fillRandom();
 			std::cout << "size: " << sp.getSize() << std::endl;
 			sp.printArray();
-			std::cout << "size: " << sp.getSize() << std::endl;
-
-			// std::cout << sp.shortestSpan() << std::endl;
-			// std::cout << sp.longestSpan() << std::endl;
+			// std::cout << "size: " << sp.getSize() << std::endl;
+			std::cout << "Shortest span: " << sp.shortestSpan() << std::endl;
+			std::cout << "Longest span: " << sp.longestSpan() << std::endl;
 		}
 		catch (std::exception& e)
 		{

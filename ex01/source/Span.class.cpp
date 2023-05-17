@@ -6,11 +6,12 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:25:54 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/17 13:50:53 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/17 14:56:49 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/Span.class.hpp"
+#include <stdexcept>
 
 Span::Span() : _max_integers(0), _added(0) {}
 
@@ -44,6 +45,26 @@ Span::~Span() {}
 
 // FUNCTIONS
 
+int		Span::shortestSpan()
+{
+	if (_array.size())
+	{
+		std::sort(_array.begin(), _array.end());
+		return 1;
+	}
+	throw std::out_of_range ("no Span can be found");
+}
+
+int		Span::longestSpan()
+{
+	if (_array.size())
+	{
+		std::sort(_array.begin(), _array.end());
+		return (*--_array.end() - *_array.begin());
+	}
+	throw std::out_of_range ("no Span can be found");
+}
+
 void	Span::addNumber(int value)
 {
 	if (_array.size() >= _max_integers)
@@ -57,7 +78,6 @@ static int RandGenerator()
 	return (std::rand() % 1000);
 }
 
-// any previous added numbers will be overwritten
 void	Span::fillRandom()
 {
 	if (_array.size() >= _max_integers)
@@ -73,19 +93,23 @@ void	Span::fillRandom()
 
 void	Span::printArray() const
 {
-	size_t temp = 200;
-	if (_max_integers < 200)
-		temp = _max_integers;
-	for (size_t i = 0; i < temp; i++)
-	{
-		std::cout << _array[i];
-		if (i < temp - 1)
-			std::cout << ", ";
+	if (_array.size())
+	{	
+		size_t temp = 200;
+		if (_max_integers < 200)
+			temp = _max_integers;
+		for (size_t i = 0; i < temp; i++)
+		{
+			std::cout << _array[i];
+			if (i < temp - 1)
+				std::cout << ", ";
+		}
+		if (_max_integers > 199)
+			std::cout << " [...]\n" << std::endl;
+		else
+			std::cout << "\n" << std::endl;
 	}
-	if (_max_integers > 199)
-		std::cout << " [...]\n" << std::endl;
-	else
-		std::cout << "\n" << std::endl;
+	std::cout << "empty array" << std::endl;
 }
 
 // ACCESSORS

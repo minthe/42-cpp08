@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:25:53 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/17 13:50:51 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/17 14:42:30 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,12 @@ class Span
 				virtual const char* what() const throw();
 		};
 
-		void	addNumber(int value);
+		int		shortestSpan();
+		int		longestSpan();
+
 		int		getSize() const;
+		void	addNumber(int value);
 		void	fillRandom();
-		int		shortestSpan() const;
-		int		longestSpan() const;
 		void	printArray() const;
 
 	private:
