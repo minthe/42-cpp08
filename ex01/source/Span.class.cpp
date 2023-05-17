@@ -6,11 +6,12 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:25:54 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/16 23:09:39 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/17 12:49:31 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/Span.class.hpp"
+#include <algorithm>
 
 Span::Span() : _max_integers(0) {}
 
@@ -36,16 +37,54 @@ Span::~Span() {}
 
 // FUNCTIONS
 
-void Span::addNumber(int value)
+void	Span::addNumber(int value)
 {
 	if (_array.size() >= _max_integers)
 		throw SpanException();
 	_array.push_back(value);
 }
 
-void Span::fillRandom()
+static int RandGenerator()
 {
-	// TODO
+	return (std::rand() % 1000);
+}
+
+void	Span::fillRandom()
+{
+    std::srand(time(0));
+	_array.resize(_max_integers);
+	std::generate(_array.begin(), _array.end(), RandGenerator);
+}
+
+void	Span::printArray() const
+{
+	size_t temp = _max_integers;
+	if (_max_integers > 200)
+	{	
+		temp = 200;
+		for (size_t i = 0; i < temp; i++)
+		{
+			std::cout << _array[i];
+			if (i < temp - 1)
+				std::cout << ", ";
+		}
+		std::cout << " [...]\n" << std::endl;
+		return ;
+	}
+	for (size_t i = 0; i < temp; i++)
+	{
+		std::cout << _array[i];
+		if (i < temp - 1)
+			std::cout << ", ";
+	}
+	std::cout << "\n" << std::endl;
+}
+
+// ACCESSORS
+
+int		Span::getSize() const
+{
+	return _array.size();
 }
 
 // EXCEPTIONS

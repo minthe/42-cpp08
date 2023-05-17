@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:25:53 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/16 23:09:33 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/17 12:37:52 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <exception>
 #include <iterator>
 #include <vector>
+#include <iostream>
 
 class Span
 {
@@ -31,9 +32,11 @@ class Span
 		};
 
 		void	addNumber(int value);
+		int		getSize() const;
 		void	fillRandom();
 		int		shortestSpan() const;
 		int		longestSpan() const;
+		void	printArray() const;
 
 	private:
 		Span();
