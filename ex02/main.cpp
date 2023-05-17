@@ -6,11 +6,11 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 19:35:57 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/17 21:15:37 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/17 23:04:07 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/MutantStack.class.hpp"
+#include "MutantStack.class.hpp"
 #include <iostream>
 #include <list>
 

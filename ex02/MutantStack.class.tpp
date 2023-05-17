@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 18:53:26 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/17 20:10:38 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/17 23:05:05 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,3 @@ typename MutantStack<T>::iterator MutantStack<T>::end()
 {
 	return std::stack<T>::c.end();
 }
-

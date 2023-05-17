@@ -6,11 +6,11 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:30:42 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/17 17:53:02 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/17 23:03:24 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/Span.class.hpp"
+#include "Span.class.hpp"
 #include <exception>
 #include <iostream>
 

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 20:39:20 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/16 15:22:10 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/17 23:03:00 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/easyfind.hpp"
+#include "easyfind.hpp"
 #include <exception>
 #include <vector>
 #include <iostream>
