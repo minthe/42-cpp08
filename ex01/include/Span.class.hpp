@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:25:53 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/17 12:37:52 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/17 13:09:43 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ class Span
 		Span();
 		std::vector<int>	_array;
 		unsigned int		_max_integers;
+		int					_added;
 };
 
 #endif
