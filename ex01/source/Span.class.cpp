@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:25:54 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/17 17:52:20 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/17 18:01:46 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ void	Span::addNumber(int value)
 
 static int RandGenerator()
 {
-	return (std::rand() % 10000); // random range
+	return (std::rand() % 1000); // random range
 }
 
 void	Span::fillRandom()
@@ -105,26 +105,23 @@ void	Span::fillRandom()
 	std::generate(it, _array.end(), RandGenerator);
 }
 
-void	Span::printArray()
+void	Span::printArray() const
 {
-	std::vector<int>::iterator	it = _array.begin();
-	size_t						temp = 200;
-
 	if (_array.size())
 	{	
+		size_t temp = 200;
 		if (_max_integers < 200)
 			temp = _max_integers;
-		for (it + 1; it < _array.end(); it++)
+		for (size_t i = 0; i < temp; i++)
 		{
-			std::cout << *it;
-			if (it < (_array.end() - 1))
+			std::cout << _array[i];
+			if (i < temp - 1)
 				std::cout << ", ";
 		}
 		if (_max_integers > 199)
 			std::cout << " [...]\n" << std::endl;
 		else
 			std::cout << "\n" << std::endl;
-		return ;
 	}
 	std::cout << "empty array" << std::endl;
 }

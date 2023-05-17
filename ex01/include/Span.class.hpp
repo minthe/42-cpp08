@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:25:53 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/17 17:13:45 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/17 18:00:17 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ class Span
 		int		getSize() const;
 		void	addNumber(int value);
 		void	fillRandom();
-		void	printArray();
+		void	printArray() const;
 
 	private:
 		std::vector<int>	_array;
