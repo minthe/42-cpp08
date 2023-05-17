@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:25:54 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/17 14:56:49 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/17 14:59:06 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,5 +123,5 @@ int		Span::getSize() const
 
 const char* Span::SpanException::what() const throw()
 {
-	return ("\x1b[31mOperation not possible\x1b[0m");
+	return ("\x1b[31mArray full\x1b[0m");
 }
