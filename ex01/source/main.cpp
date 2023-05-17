@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
+/*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:30:42 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/17 13:47:35 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/17 11:56:54 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int main()
 		{
 			std::cout << "\x1b[47mTest 2\x1b[0m\n"<< std::endl;
 
-			Span sp = Span(-5);
+			Span sp = Span(1);
 			sp.addNumber(-999);
 			sp.addNumber(+6);
 			std::cout << "size: " << sp.getSize() << std::endl;
