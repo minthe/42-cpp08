@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:25:54 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/17 14:59:06 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/17 15:04:37 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ Span::~Span() {}
 
 // FUNCTIONS
 
-int		Span::shortestSpan()
+int		Span::shortestSpan() // TODO
 {
 	if (_array.size())
 	{
