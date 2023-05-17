@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:25:53 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/17 13:09:43 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/17 13:50:51 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 #include <iterator>
 #include <vector>
 #include <iostream>
+#include <algorithm>
+#include <climits>
 
 class Span
 {

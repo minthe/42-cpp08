@@ -6,13 +6,11 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:25:54 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/17 13:48:30 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/17 13:50:53 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/Span.class.hpp"
-#include <algorithm>
-#include <iterator>
 
 Span::Span() : _max_integers(0), _added(0) {}
 
