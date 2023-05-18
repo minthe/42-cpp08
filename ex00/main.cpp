@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
+/*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 20:39:20 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/17 23:03:00 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/18 11:24:32 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ int main()
 	{
 		std::vector<int> some_numbers;
 
-		some_numbers.push_back(0);
-		some_numbers.push_back(-4);
 		some_numbers.push_back(6);
+		some_numbers.push_back(2147483647);
+		some_numbers.push_back(-2147483648);
 
-		std::cout << *easyfind(some_numbers, 5) << std::endl; // dereferenced iterator of std::vector
+		std::cout << *easyfind(some_numbers, -2147483648) << std::endl; // dereferenced iterator of std::vector
 	}
 	catch (std::exception& e)
 	{
