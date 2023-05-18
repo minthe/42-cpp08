@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Span.class.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:25:54 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/18 11:20:00 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/18 13:29:51 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,8 +78,6 @@ long long	Span::longestSpan()
 
 void	Span::addNumber(int value)
 {
-	if (!(value >= INT_MIN && value <= INT_MAX))
-		throw std::out_of_range ("\x1b[31minput exceeds max integer range\x1b[0m");
 	if (_array.size() >= _max_integers)
 		throw SpanException();
 	_array.push_back(value);
