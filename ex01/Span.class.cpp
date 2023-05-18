@@ -3,17 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   Span.class.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
+/*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:25:54 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/17 23:03:39 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/18 11:20:00 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.class.hpp"
-#include <cstddef>
-#include <limits>
-#include <stdexcept>
 
 Span::Span() : _max_integers(0), _added(0) {}
 
@@ -47,20 +44,20 @@ Span::~Span() {}
 
 // FUNCTIONS
 
-int		Span::shortestSpan() // TODO
+long long	Span::shortestSpan()
 {
 	std::vector<int>::iterator	it;
-	int							shortestSpan;
-	int							difference = 0;
+	long long					shortestSpan;
+	long long					difference = 0;
 	
-	shortestSpan = 2147483647;
+	shortestSpan = 4294967295;
 
-	std::sort(_array.begin(), _array.end());
+	std::sort(_array.begin(), _array.end()); // sort ascending order
 	if (_array.size() > 1)
 	{
 		for (it = _array.begin() + 1; it != _array.end(); ++it)
 		{
-			difference = *it - *(it - 1);
+			difference = static_cast<long long>(*it) - static_cast<long long>(*(it - 1));
 			// std::cout << "DEBUG" << difference << std::endl; // DEBUG
 			shortestSpan = std::min(shortestSpan, difference);
 		}
@@ -69,18 +66,20 @@ int		Span::shortestSpan() // TODO
 	throw std::out_of_range ("\x1b[31mSpan not possible\x1b[0m");
 }
 
-int		Span::longestSpan()
+long long	Span::longestSpan()
 {
 	if (_array.size() > 1)
 	{
-		std::sort(_array.begin(), _array.end());
-		return (*_array.rbegin() - *_array.begin());
+		std::sort(_array.begin(), _array.end()); // sort with ascending order
+		return (static_cast<long long>(*_array.rbegin()) - (static_cast<long long>(*_array.begin())));
 	}
 	throw std::out_of_range ("\x1b[31mSpan not possible\x1b[0m");
 }
 
 void	Span::addNumber(int value)
 {
+	if (!(value >= INT_MIN && value <= INT_MAX))
+		throw std::out_of_range ("\x1b[31minput exceeds max integer range\x1b[0m");
 	if (_array.size() >= _max_integers)
 		throw SpanException();
 	_array.push_back(value);
@@ -123,7 +122,8 @@ void	Span::printArray() const
 		else
 			std::cout << "\n" << std::endl;
 	}
-	std::cout << "empty array" << std::endl;
+	else
+		std::cout << "empty array" << std::endl;
 }
 
 // ACCESSORS

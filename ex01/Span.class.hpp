@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Span.class.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
+/*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:25:53 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/17 18:00:17 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/18 11:06:16 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,9 @@
 #include <algorithm>
 #include <climits>
 #include <numeric>
+#include <cstddef>
+#include <limits>
+#include <stdexcept>
 
 class Span
 {
@@ -35,13 +38,13 @@ class Span
 				virtual const char* what() const throw();
 		};
 
-		int		shortestSpan();
-		int		longestSpan();
+		long long		shortestSpan();
+		long long		longestSpan();
 
-		int		getSize() const;
-		void	addNumber(int value);
-		void	fillRandom();
-		void	printArray() const;
+		int				getSize() const;
+		void			addNumber(int value);
+		void			fillRandom();
+		void			printArray() const;
 
 	private:
 		std::vector<int>	_array;

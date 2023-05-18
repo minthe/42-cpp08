@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
+/*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:30:42 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/17 23:03:24 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/18 11:21:01 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,10 @@ int main()
 		std::cout << "\n\x1b[47mTest 2\x1b[0m\n"<< std::endl;
 		try
 		{
-			Span sp = Span(61);
-			sp.addNumber(4);
+			Span sp = Span(1508090);
+			sp.addNumber(-2147483648);
 			sp.addNumber(6);
-			sp.addNumber(7);
+			sp.addNumber(2147483647);
 			std::cout << "size: " << sp.getSize() << std::endl;
 			sp.fillRandom();
 			std::cout << "size: " << sp.getSize() << std::endl;
